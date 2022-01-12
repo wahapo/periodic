@@ -1,0 +1,9 @@
+jobs:
+  main:
+    requires: [ ~commit, ~pr ]
+    steps:
+      - ls
+    image: node:16
+    annotations:
+      screwdriver.cd/buildPeriodically: H 7 * * 4L
+      
